@@ -1,0 +1,7 @@
+name: CommandCost
+main: me.skymc.commandcost.CommandCost
+version: {$VERSION}
+
+commands:
+  commandcost:
+    permission: commandcost.admin
