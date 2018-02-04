@@ -43,7 +43,7 @@ public class CommandCost extends JavaPlugin implements Listener {
 	public void command(PlayerCommandPreprocessEvent e) {
 		for (String command : getConfig().getConfigurationSection("commands").getKeys(false)) {
 			// 指令相同
-			if (e.getMessage().split(" ")[0].equals(command)) {
+			if (e.getMessage().toLowerCase().startsWith(command)) {
 				// 参数符合
 				if (e.getMessage().split(" ").length >= getConfig().getInt("commands." + command + ".length")) {
 					// 点券不足
